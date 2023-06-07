@@ -7,6 +7,7 @@ def get_exchange_rate(base_currency, target_currency):
   api_key = b737cf750c85f10fd181f880 #personal api key
   URL = "https://v6.exchangerate-api.com/v6/b737cf750c85f10fd181f880/latest/USD" #api key within the URL
   response = requests.get(URL)
+  
   data = response.json()
   if response.status_code == 200:
       if target_currency in data["conversion_rates"]:
