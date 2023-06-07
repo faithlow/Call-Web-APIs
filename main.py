@@ -28,4 +28,3 @@ if __name__ == '__main__': #start of program execution
     print(f"For {user_amount} {user_base_currency} , you can exchange to {exchange_amount_2_decimal} {user_target_currency}")
   else: 
     print ("Failed to fetch exchance rate between " + user_base_currency + " to " + user_target_currency +".")
-      
