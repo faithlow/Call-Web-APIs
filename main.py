@@ -17,8 +17,8 @@ def get_exchange_rate(base_currency, target_currency):
     
 
 if __name__ == '__main__': #start of program execution
-  user_base_currency = input("What currency do you want to convert from: ").upper() #subs for the base_currency in the def
-  user_target_currency = input("What currency do you want to exchange it to?: ").upper() #subs for the target_currency in the def
+  user_base_currency = input("What currency do you want to convert from (write as 3 letter currency code): ").upper() #subs for the base_currency in the def
+  user_target_currency = input("What currency do you want to exchange it to? (write as 3 letter currency code): ").upper() #subs for the target_currency in the def
   user_amount = input("How much " + user_base_currency + " do you want to exchange to " + user_target_currency + ": ")
   exchange_rate = get_exchange_rate(user_base_currency, user_target_currency)
   if exchange_rate is not None:
