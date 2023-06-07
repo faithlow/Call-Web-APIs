@@ -5,7 +5,7 @@ import requests
 
 def get_exchange_rate(base_currency, target_currency):
   api_key = b737cf750c85f10fd181f880 #personal api key
-  URL = "https://v6.exchangerate-api.com/v6/b737cf750c85f10fd181f880/latest/USD" #api key within the URL
+  URL = f"https://v6.exchangerate-api.com/v6/b737cf750c85f10fd181f880/latest/USD" #api key within the URL
   response = requests.get(URL)
   
   data = response.json()
@@ -17,5 +17,10 @@ def get_exchange_rate(base_currency, target_currency):
         return None
   else:
       return None
-        
+
+exchange_rate = get_exchange_rate(base_currency, target_currency)
+if exchange_rate is not None:
+  print(f"1 {base_currency} = {exchange_rate} {target_currency}")
+else: 
+  print ("Failed to fetch exchance rate.")
       
